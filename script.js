@@ -79,17 +79,34 @@ function loadDashboard(){
 
 // تسجيل حضور
 function checkIn(){
+    function checkIn(){
     let current = localStorage.getItem("currentUser");
+    if(!current){ alert("رجاء تسجيل الدخول"); return; }
+
     let user = employees.find(u => u.name === current);
-    if(user.lastCheckIn){
+    if(!user) { alert("الموظف غير موجود"); return; }
+
+    // لو لم يتم تسجيل حضور
+    if(!user.lastCheckIn){
+        let now = new Date();
+        user.lastCheckIn = now.toISOString(); // نخزن بصيغة دقيقة
+        saveEmployees(); // 🔹 مهم للحفظ
+        document.getElementById("last-in").innerText = new Date(user.lastCheckIn).toLocaleString();
+
+        // تحديث الموقع مباشرة
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(pos=>{
+                user.lastLocation = `Lat:${pos.coords.latitude.toFixed(4)}, Lng:${pos.coords.longitude.toFixed(4)}`;
+                document.getElementById("user-location").innerText = user.lastLocation;
+                saveEmployees(); // حفظ بعد تحديث اللوكيشن
+            });
+        }
+
+        alert("تم تسجيل الحضور");
+    } else {
         alert("أنت مسجل حضور بالفعل");
-        return;
     }
-    let now = new Date().toLocaleString();
-    user.lastCheckIn = now;
-    saveEmployees();
-    document.getElementById("last-in").innerText = now;
-    alert("تم تسجيل الحضور");
+}
 }
 
 // تسجيل خروج
@@ -137,6 +154,7 @@ function loadAdmin(){
         }
     });
 }
+
 
 
 
