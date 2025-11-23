@@ -83,13 +83,10 @@ function checkIn(){
     let user = employees.find(u => u.name === current);
     if(user.lastCheckIn){
         alert("أنت مسجل حضور بالفعل");
-        return;
+       user.location=new data (). toLocaleString();
+       saveEmployees();//حفظ البيانات بعد اي تغيير
+       alert("تم تسجيل الحضور ");
     }
-    let now = new Date().toLocaleString();
-    user.lastCheckIn = now;
-    saveEmployees();
-    document.getElementById("last-in").innerText = now;
-    alert("تم تسجيل الحضور");
 }
 
 // تسجيل خروج
@@ -137,3 +134,4 @@ function loadAdmin(){
         }
     });
 }
+
