@@ -64,14 +64,18 @@ function loadDashboard(){
     document.getElementById("last-in").innerText = user.lastCheckIn || "—";
     document.getElementById("last-out").innerText = user.lastCheckOut || "—";
 
+    // تحديث اللوكيشن مباشرة عند فتح الصفحة
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(pos=>{
             user.lastLocation = `Lat:${pos.coords.latitude.toFixed(4)}, Lng:${pos.coords.longitude.toFixed(4)}`;
             document.getElementById("user-location").innerText = user.lastLocation;
             saveEmployees();
+        }, err=>{
+            document.getElementById("user-location").innerText = "Location not available";
         });
     }
 }
+
 
 // تسجيل حضور
 function checkIn(){
