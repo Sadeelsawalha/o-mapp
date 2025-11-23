@@ -93,7 +93,7 @@ function checkIn(){
 function checkOut(){
     let current = localStorage.getItem("currentUser");
     let user = employees.find(u => u.name === current);
-    if(!user.lastCheckIn){
+    if(user.lastCheckIn){
         alert("لم يتم تسجيل حضور");
         return;
     }
@@ -134,4 +134,5 @@ function loadAdmin(){
         }
     });
 }
+
 
