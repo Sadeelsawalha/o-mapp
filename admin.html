@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body onload="loadAdmin()">
+
+<div class="admin-container">
+    <h2>Admin Panel</h2>
+    <table border="1" cellpadding="6">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last Check In</th>
+                <th>Last Check Out</th>
+                <th>Hours Worked</th>
+                <th>Last Location</th>
+            </tr>
+        </thead>
+        <tbody id="admin-table"></tbody>
+    </table>
+    <button onclick="logout()">Log Out</button>
+</div>
+
+</body>
+</html>

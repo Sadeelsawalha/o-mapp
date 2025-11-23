@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body onload="loadDashboard()">
+
+<div class="dashboard-container">
+    <h2>Welcome, <span id="user-name"></span></h2>
+    <p>Hours Worked: <span id="hours-worked">0</span></p>
+    <p>Last Check In: <span id="last-in">—</span></p>
+    <p>Last Check Out: <span id="last-out">—</span></p>
+    <p>Last Location: <span id="user-location">—</span></p>
+
+    <button onclick="checkIn()">Check In</button>
+    <button onclick="checkOut()">Check Out</button>
+    <button onclick="logout()">Log Out</button>
+
+    <div class="company-image">
+        <img src="WhatsApp Image 2025-11-23 at 20.10.31.jpeg" alt="" width="200">
+    </div>
+</div>
+
+</body>
+</html>

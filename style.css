@@ -1,0 +1,132 @@
+/*------------------------------------*/
+/* عام */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------*/
+/* صفحة تسجيل الدخول */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    width: 95%;
+    padding: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #357ae8;
+}
+
+.login-container #login-error {
+    color: red;
+    margin-top: 10px;
+}
+
+.login-container .footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #777;
+}
+
+/*------------------------------------*/
+/* Dashboard الموظف */
+.dashboard-container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dashboard-container h2 {
+    margin-bottom: 20px;
+}
+
+.dashboard-container button {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard-container button:hover {
+    background-color: #357ae8;
+}
+
+.dashboard-container .company-image {
+    margin-top: 20px;
+}
+
+/*------------------------------------*/
+/* Admin */
+.admin-container {
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.admin-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-container th, .admin-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.admin-container th {
+    background-color: #4285f4;
+    color: white;
+}
+
+.admin-container button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-container button:hover {
+    background-color: #357ae8;
+}
